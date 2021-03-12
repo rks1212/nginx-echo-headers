@@ -1,6 +1,6 @@
 trigger:
 - master
-
+# define the VM agent pool Name
 pool:
   name: 'govpool'
 
