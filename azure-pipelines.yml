@@ -1,5 +1,5 @@
 trigger:
-- master
+- none
 # define the VM agent pool Name
 pool:
   name: 'govpool'
@@ -19,4 +19,4 @@ steps:
     azureResourceGroup: 'private-aks-RG'
     kubernetesCluster: 'private-aks-cls'
     command: 'apply'
-    arguments: '-f nginx-echo-headers/deploy.yaml'
+    arguments: '-f deploy.yaml'
