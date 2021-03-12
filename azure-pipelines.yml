@@ -15,8 +15,12 @@ steps:
 - task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'aksRKS-service-connection'
+    azureSubscriptionEndpoint: 'MS_SI_INTERNAL_SUBS (2b2bb6af-68a3-4419-af72-5ba0de5312e8)'
     azureResourceGroup: 'private-aks-RG'
     kubernetesCluster: 'private-aks-cls'
     command: 'apply'
-    arguments: '-f deploy.yaml'
+    useConfigurationFile: true
+    configuration: 'deploy.yaml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
+
