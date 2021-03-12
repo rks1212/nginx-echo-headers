@@ -19,4 +19,4 @@ steps:
     azureResourceGroup: 'private-aks-RG'
     kubernetesCluster: 'private-aks-cls'
     command: 'apply'
-    arguments: '-f deploy.yaml'
+    arguments: '-f nginx-echo-headers/deploy.yaml'
